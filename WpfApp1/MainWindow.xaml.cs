@@ -32,7 +32,7 @@ namespace WpfApp1
             versionResponse.Clear();
             var osNameAndVersion = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
             osNameAndVersion += " ";
-            osNameAndVersion += System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            osNameAndVersion += Environment.UserName;
             versionResponse.AppendText(osNameAndVersion);
 
         }
